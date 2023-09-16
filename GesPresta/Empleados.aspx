@@ -12,7 +12,7 @@
     <title></title>
 </head>
 <body>
-    <form id="form2" runat="server" >
+    <form id="form1" runat="server" >
         <div>
             <uc1:Cabecera ID="Cabecera1" runat="server" />
         </div>

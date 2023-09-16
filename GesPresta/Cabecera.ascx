@@ -5,7 +5,7 @@
     <div runat="server">
                 <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Default.aspx" CssClass="lnkBtn">Inicio</asp:LinkButton></li>
                 <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Empleados.aspx" CssClass="lnkBtn">Empleados</asp:LinkButton></li>
-                <asp:LinkButton ID="LinkButton3" runat="server" NavigateUrl="http://www.microsoft.com" CssClass="lnkBtn"> Prestaciones</asp:LinkButton></li>
+                <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Prestaciones.aspx" CssClass="lnkBtn"> Prestaciones</asp:LinkButton></li>
     </div>
 
     <div runat="server" class="txt" >
