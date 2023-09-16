@@ -1,12 +1,68 @@
-﻿body {
+﻿/*   CABECERA   */
+.pnl  {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.pnl div .lnkBtn {
+        margin-right: 20px;}
+
+.txt {
+        padding-bottom: 20px;
+        padding-top: 30px}
+
+.title {
+    font-size: 45px
+}
+
+.subtitle {
+    font-size: 25px;
+    letter-spacing: -2px;
+}
+
+/*  Default   */
+.default {
+    font-family: 'Times New Roman';
+    font-size: 23px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+    text-align:justify
+}
+
+/* EMPLEADOS  */
+#form2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-li {
+.txtEmp, .send {
+    text-align: center; 
+    Font-Size:x-large;
+    margin-bottom:20px;
+}
+
+.celName {
+    width: 330px;
+    text-align: right;}
+.txtBox {
+    Width: 250px;
+    Height: 25px;
+    border: solid 2px rgb(51, 102, 204);
+    margin-left:30px
+}
+.drpDown, .rbtBtnLst{
+    margin-left: 30px
+}
+
+.btnSend {
+    background-color: rgb(51, 102, 204);
+    border: none;
+    color: white;
+    text-align: center;
     font-size: 18px;
-    display: inline-block;
-    list-style-type: none;
-    padding: 10px;
-    position: relative;
+    margin: 10px;
+    padding: 8px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
