@@ -99,10 +99,10 @@
                 <asp:TableCell runat="server" style="width: 30px" Text=" "></asp:TableCell>
                 <asp:TableCell runat="server">
                     <asp:DropDownList ID="ddlDepEmp" runat="server">
-                        <asp:ListItem selected= "true" value= “Investigación”> Investigación</asp:ListItem>
-                        <asp:ListItem selected= "false" value= “Desarrollo”> Desarrollo </asp:ListItem>
-                        <asp:ListItem selected= "false" value= “Innovación”> Innovación </asp:ListItem>
-                        <asp:ListItem selected= "false" value= “Administración”> Administración </asp:ListItem>
+                        <asp:ListItem selected= "true" value= "Investigación"> Investigación</asp:ListItem>
+                        <asp:ListItem selected= "false" value= "Desarrollo"> Desarrollo </asp:ListItem>
+                        <asp:ListItem selected= "false" value= "Innovación"> Innovación </asp:ListItem>
+                        <asp:ListItem selected= "false" value= "Administración"> Administración </asp:ListItem>
                     </asp:DropDownList>
                 </asp:TableCell>
             </asp:TableRow>
