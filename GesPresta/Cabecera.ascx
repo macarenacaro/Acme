@@ -4,9 +4,9 @@
 <asp:Panel ID="Panel1" runat="server">
 <div runat="server" style="text-align: center">
 <ul style="margin-left: 0px" runat="server">
-<li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="http://www.microsoft.com">Inicio</asp:HyperLink></li>
-<li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="http://www.microsoft.com">Empleados</asp:HyperLink></li>
-<li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://www.microsoft.com"> Prestaciones</asp:HyperLink></li>
+<li><asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Default.aspx">Inicio</asp:LinkButton></li>
+<li><asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Empleados.aspx">Empleados</asp:LinkButton></li>
+<li><asp:LinkButton ID="LinkButton3" runat="server" NavigateUrl="http://www.microsoft.com"> Prestaciones</asp:LinkButton></li>
 </ul>
 </div>
 

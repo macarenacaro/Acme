@@ -24,30 +24,30 @@ namespace GesPresta
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
-        /// Control HyperLink1.
+        /// Control LinkButton1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
 
         /// <summary>
-        /// Control HyperLink2.
+        /// Control LinkButton2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
 
         /// <summary>
-        /// Control HyperLink3.
+        /// Control LinkButton3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton3;
     }
 }
