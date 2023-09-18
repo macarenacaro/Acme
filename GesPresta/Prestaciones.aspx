@@ -32,7 +32,7 @@
             <asp:TableRow runat="server" Height="40px">
                 <asp:TableCell runat="server" CssClass="celName" Text="Descripción"> </asp:TableCell>               
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtDesPre" runat="server" CssClass="txtBox" ></asp:TextBox>
+                    <asp:TextBox ID="txtDesPre" runat="server" CssClass="txtBoxN" ></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
 
