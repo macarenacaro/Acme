@@ -39,28 +39,28 @@
             <asp:TableRow runat="server" Height="40px">
                 <asp:TableCell runat="server" CssClass="celName" Text="Apellidos y Nombre"> </asp:TableCell>              
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtNomEmp" runat="server" CssClass="txtBoxN"></asp:TextBox>
+                    <asp:TextBox ID="txtNomEmp" runat="server" CssClass="txtBox"  Width="600"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow runat="server" Height="40px">
-                <asp:TableCell runat="server" CssClass="celName" Text="Dirección"> </asp:TableCell>       
+                <asp:TableCell runat="server" CssClass="celName" Text="Dirección" > </asp:TableCell>       
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtDirEmp" runat="server" CssClass="txtBoxN"></asp:TextBox>
+                    <asp:TextBox ID="txtDirEmp" runat="server" CssClass="txtBox"  Width="650"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow runat="server" Height="40px">
                 <asp:TableCell runat="server" CssClass="celName" Text="Ciudad"> </asp:TableCell>                
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtCiuEmp" runat="server" CssClass="txtBoxN"></asp:TextBox>
+                    <asp:TextBox ID="txtCiuEmp" runat="server" CssClass="txtBox" Width="650"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow runat="server" Height="40px">
                 <asp:TableCell runat="server" CssClass="celName" Text="Teléfonos"> </asp:TableCell>               
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtTelEmp" runat="server" CssClass="txtBoxN"></asp:TextBox>
+                    <asp:TextBox ID="txtTelEmp" runat="server" CssClass="txtBox" Width="400"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
 
