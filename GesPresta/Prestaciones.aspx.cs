@@ -11,7 +11,7 @@ namespace GesPresta
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            txtCodPre.Focus();//HACE QUE EL CURSOR PARTA DIRECTAMENTE EN ESTE TEXTBOX
         }
     }
 }

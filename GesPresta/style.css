@@ -35,7 +35,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.txtEmp, .send {
+.txtEmp, .send  {
     text-align: center; 
     Font-Size:x-large;
     margin-bottom:20px;
@@ -67,3 +67,10 @@
     cursor: pointer;
 }
 
+/*EMPLEADOS 1 - VALORES CUADRO CYAN*/
+.val {
+    text-align: center;
+}
+.valores {
+    Font-Size: medium;
+}
