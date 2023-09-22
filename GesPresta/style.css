@@ -35,10 +35,17 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.txtEmp, .send  {
-    text-align: center; 
-    Font-Size:x-large;
-    margin-bottom:20px;
+
+#Table1, #Table2{
+    margin: auto;
+}
+
+
+.send, .txtEmp {
+    text-align: center;
+    Font-Size: x-large;
+    margin-bottom: 20px;
+    margin: auto;
 }
 
 .celName {
@@ -71,4 +78,18 @@
 .val {
     text-align: center;
     Font-Size: medium;
+}
+
+/*EMPLEADOSCALENDAR*/
+
+.lbl {
+font-size: small;
+text-align: center;
+}
+
+.lblError {
+    font-size: small;
+    text-align: center;
+    background-color:red;
+    color:white;
 }
