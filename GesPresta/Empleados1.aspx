@@ -106,7 +106,7 @@
             <asp:Button ID="cmdEnviar" runat="server" Text="Enviar" CssClass="btnSend" OnClick="cmd_Enviar" />
         </div>
         <div class="val">
-        <asp:Label ID="lblValores" runat="server" Text="Label" BackColor="#66FFFF" Width="60%" Visible="False" CssClass="valores"></asp:Label>
+        <asp:Label ID="lblValores" runat="server" Text="Label" BackColor="#66FFFF" Width="60%" Visible="False" ></asp:Label>
         </div>
     </form>
 
