@@ -112,7 +112,7 @@
 
                     <asp:TableCell runat="server" Width="20%">
                         <asp:Label ID="Label2" runat="server" Text="Fecha de Nacimiento" CssClass="lbl"></asp:Label> <br />
-                        <asp:TextBox ID="txtNac" runat="server" OnTextChanged="txt_TextChanged"></asp:TextBox><br />
+                        <asp:TextBox ID="txtNac" runat="server" OnTextChanged="TextChanged_txt" AutoPostBack="true"></asp:TextBox><br />
                          <asp:Label ID="lblError1" runat="server" Text="" CssClass="lblError"></asp:Label> <br /><br />
                          <asp:Label ID="lblError3" runat="server" Text="" CssClass="lblError"></asp:Label> <br /><br />
 

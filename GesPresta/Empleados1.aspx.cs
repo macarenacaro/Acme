@@ -14,11 +14,12 @@ namespace GesPresta
             txtCodEmp.Focus();
         }
 
-        protected void cmd_Enviar(object sender, EventArgs e)
+        protected void cmdEnviar_Click(object sender, EventArgs e)
         {
-            lblValores.Visible = true;
-            lblValores.Text = "VALORES DEL FORMULARIO" +
-            "<br/> Código Empleado: " + txtCodEmp.Text +
+            //CUANDO HAGO CLICK EN BUTTON, LA LABEL CON ID: lblValores--
+            lblValores.Visible = true; // LA HAREMOS VISIBLE.
+            lblValores.Text = "VALORES DEL FORMULARIO" + // SU TEXTO DIRÁ:
+            "<br/> Código Empleado: " + txtCodEmp.Text + // Código Empleado:+ VALOR DE TXTBOX COD EMP.
             "<br/> NIF: " + txtNifEmp.Text +
             "<br/> Apellidos y Nombre: " + txtNomEmp.Text +
             "<br/> Dirección: " + txtDirEmp.Text +

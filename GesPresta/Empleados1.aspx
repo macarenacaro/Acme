@@ -103,7 +103,7 @@
 
         </asp:Table>
         <div class="send" >
-            <asp:Button ID="cmdEnviar" runat="server" Text="Enviar" CssClass="btnSend" OnClick="cmd_Enviar" />
+            <asp:Button ID="cmdEnviar" runat="server" Text="Enviar" CssClass="btnSend" OnClick="cmdEnviar_Click" />
         </div>
         <div class="val">
         <asp:Label ID="lblValores" runat="server" Text="Label" BackColor="#66FFFF" Width="60%" Visible="False" ></asp:Label>

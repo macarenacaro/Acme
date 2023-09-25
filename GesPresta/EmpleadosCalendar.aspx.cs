@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Services.Description;
@@ -10,10 +11,22 @@ namespace GesPresta
 {
     public partial class EmpleadosCalendar : System.Web.UI.Page
     {
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (!Page.IsPostBack)  // Se ejecuta solo en la carga inicial del Web Form Ó cuando se haga click en enviar
+            {
+                txtCodEmp.Focus();
+
+             
+            }
+            else // Este código se ejecuta cuando es una devolución de datos
+            {
+               
+            }
           
-            //  txtCodEmp.Focus();
 
             //PARA FECHA ACTUAL SE PUEDE UTILIZAR
             //DateTime dtHoy = System.DateTime.Now;   Ó   DateTime.Today
@@ -33,30 +46,29 @@ namespace GesPresta
             "<br/> Fecha de Incorporación: " + txtFinEmp.Text +
             "<br/> Sexo: " + rblSexEmp.SelectedItem.Value +
             "<br/> Departamento: " + ddlDepEmp.Text;
+
         }
 
         protected void Calendar_SelectionChanged(object sender, EventArgs e)
         {
-        
 
-            Calendar calendario = sender as Calendar;
 
-            switch (calendario.ID) {
+            if (CalendarBorn.SelectedDate != null) {
 
-                case "CalendarBorn":
-                    
-                    txtNac.Text = (CalendarBorn.SelectedDate.ToString()).Substring(0, 11); // LE SACO LOS 00:00:00 A LA FECHA SELECCIONADA ;
-                    txtFnaEmp.Text = (CalendarBorn.SelectedDate.ToString()).Substring(0, 11); // LE SACO LOS 00:00:00 A LA FECHA SELECCIONADA ;
-
-                    //CalendarBorn.SelectedDate = Convert.ToDateTime(txtFnaEmp.Text);  NO ME FUNCIONOOO
-                    break;
-                case "CalendarIngr":
-                    cFinEmp.Text = (CalendarIngr.SelectedDate.ToString()).Substring(0, 11); // LE SACO LOS 00:00:00 A LA FECHA SELECCIONADA ;
-                    txtFinEmp.Text = (CalendarIngr.SelectedDate.ToString()).Substring(0, 11);
-                    break;
+                //muestro la fecha seleccionada del calendar Born en los textbox
+                txtNac.Text = (CalendarBorn.SelectedDate.ToString()).Substring(0, 11); // LE SACO LOS 00:00:00 A LA FECHA SELECCIONADA ;
+                txtFnaEmp.Text = (CalendarBorn.SelectedDate.ToString()).Substring(0, 11); // LE SACO LOS 00:00:00 A LA FECHA SELECCIONADA ;
             }
 
-            //SI LOS TEXTBOX TIENEN TEXTOS HAREMOS:
+            if (CalendarIngr.SelectedDate != null)
+            {
+                    //muestro la fecha seleccionada del calendar Ingr en los textbox
+                    cFinEmp.Text = (CalendarIngr.SelectedDate.ToString()).Substring(0, 11); // LE SACO LOS 00:00:00 A LA FECHA SELECCIONADA ;
+                    txtFinEmp.Text = (CalendarIngr.SelectedDate.ToString()).Substring(0, 11);
+       
+            }
+
+            //SI AMBOSTIENEN TEXTOS HAREMOS:
             if ((cFinEmp.Text != "") && (txtNac.Text != ""))
             {
                 //SI LA FECHA DE NACIMIENTO ES MAYOR A LA FECHA DE INGRESO)
@@ -68,7 +80,7 @@ namespace GesPresta
             }
 
             //SOLO PARA EVALUAR LA FECHA DE INGRESO:
-            if (cFinEmp.Text != ""){
+            if (cFinEmp.Text != ""){ //SI LA CASILLA NO ESTÁ VACIA
                 if (Convert.ToDateTime(cFinEmp.Text) > DateTime.Today)
                 {
                     lblError2.Text = "La fecha de Ingreso,\n no puede ser mayor al día actual";
@@ -93,6 +105,7 @@ namespace GesPresta
                 
             };
 
+            //SOLO PARA FECHA DE NACIMIENTO
             if (txtNac.Text != "")
             {
                 if (Convert.ToDateTime(txtNac.Text) > DateTime.Today)
@@ -103,17 +116,20 @@ namespace GesPresta
             };
         }
 
-        protected void txt_TextChanged(object sender, EventArgs e)
+        protected void TextChanged_txt(object sender, EventArgs e)
         {
+            //con el AutoPostBack="true" revisa, inmediatamente letra por letra el txt changed.
+            CalendarBorn.SelectedDate = Convert.ToDateTime(txtNac.Text);
+            CalendarBorn.VisibleDate = Convert.ToDateTime(txtNac.Text);
 
-          /*  if ((cFinEmp.Text != "") && (txtNac.Text != "")) {
-                //SI LA FECHA DE NACIMIENTO ES MAYOR A LA FECHA DE INGRESO)
-                if (Convert.ToDateTime(txtNac.Text) >= Convert.ToDateTime(cFinEmp.Text)){
-                    lblError1.Text = "La fecha de Nacimiento0,no puede ser mayor a la de Ingreso";
-                }
-                
-                
-            }*/
+            /*  if ((cFinEmp.Text != "") && (txtNac.Text != "")) {
+                  //SI LA FECHA DE NACIMIENTO ES MAYOR A LA FECHA DE INGRESO)
+                  if (Convert.ToDateTime(txtNac.Text) >= Convert.ToDateTime(cFinEmp.Text)){
+                      lblError1.Text = "La fecha de Nacimiento0,no puede ser mayor a la de Ingreso";
+                  }
+
+
+              }*/
         }
     }
 }
