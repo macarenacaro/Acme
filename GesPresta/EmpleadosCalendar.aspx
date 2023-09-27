@@ -68,14 +68,14 @@
             <asp:TableRow runat="server" Height="40px">
                 <asp:TableCell runat="server" CssClass="celName" Text="Fecha de Nacimiento"> </asp:TableCell>                 
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtFnaEmp" runat="server" CssClass="txtBox"></asp:TextBox>
+                    <asp:TextBox ID="txtFnaEmp" runat="server" CssClass="txtBox" OnTextChanged="TextChanged_txt" AutoPostBack="true"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow runat="server" Height="40px">
                 <asp:TableCell runat="server" CssClass="celName" Text="Fecha de Ingreso"> </asp:TableCell>        
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtFinEmp" runat="server" CssClass="txtBox"></asp:TextBox>
+                    <asp:TextBox ID="txtFinEmp" runat="server" CssClass="txtBox" OnTextChanged="TextChanged_txt" AutoPostBack="true"></asp:TextBox>
                 </asp:TableCell>
             </asp:TableRow>
 
@@ -120,30 +120,30 @@
                     </asp:TableCell>
 
                     <asp:TableCell runat="server">
-                        <asp:Calendar ID="CalendarBorn" runat="server" Width="20%" Font-Size="Small" DayHeaderStyle-BackColor="#99CCFF" SelectedDayStyle-BackColor="#6699FF" WeekendDayStyle-BackColor="#FFFF99" OtherMonthDayStyle-BackColor="#E1E1E1" TitleStyle-BackColor="#000099" TitleStyle-ForeColor="white"  OnSelectionChanged="Calendar_SelectionChanged" ></asp:Calendar>
+                        <asp:Calendar ID="CalendarBorn" runat="server" Width="20%" Font-Size="Small" DayHeaderStyle-BackColor="#99CCFF" SelectedDayStyle-BackColor="#6699FF" WeekendDayStyle-BackColor="#FFFF99" OtherMonthDayStyle-BackColor="#E1E1E1" TitleStyle-BackColor="#000099" TitleStyle-ForeColor="white"  OnSelectionChanged="CalendarBorn_SelectionChanged" ></asp:Calendar>
                     </asp:TableCell>
 
                     <asp:TableCell runat="server" Text=" ">      </asp:TableCell>
 
                     <asp:TableCell runat="server" Width="20%">
                          <asp:Label ID="Label3" runat="server" Text="Fecha de Ingreso" CssClass="lbl"></asp:Label> <br />
-                        <asp:TextBox ID="cFinEmp" runat="server"></asp:TextBox><br />
+                        <asp:TextBox ID="cFinEmp" runat="server" OnTextChanged="TextChanged_txt" AutoPostBack="true"></asp:TextBox><br />
                         <asp:Label ID="lblError2" runat="server" Text="" CssClass="lblError"></asp:Label> <br />
 
                     </asp:TableCell>
 
                     <asp:TableCell runat="server">
-                   <asp:Calendar ID="CalendarIngr" runat="server" Width="20%" Font-Size="Small" DayHeaderStyle-BackColor="#99CCFF" SelectedDayStyle-BackColor="#6699FF" WeekendDayStyle-BackColor="#FFFF99" OtherMonthDayStyle-BackColor="#E1E1E1" TitleStyle-BackColor="#000099" TitleStyle-ForeColor="white"  OnSelectionChanged="Calendar_SelectionChanged"  ValueToCompare="text"></asp:Calendar>
+                   <asp:Calendar ID="CalendarIngr" runat="server" Width="20%" Font-Size="Small" DayHeaderStyle-BackColor="#99CCFF" SelectedDayStyle-BackColor="#6699FF" WeekendDayStyle-BackColor="#FFFF99" OtherMonthDayStyle-BackColor="#E1E1E1" TitleStyle-BackColor="#000099" TitleStyle-ForeColor="white"  OnSelectionChanged="CalendarIngr_SelectionChanged"  ValueToCompare="text"></asp:Calendar>
                     </asp:TableCell>
 
 
                     <asp:TableCell runat="server">
                         <asp:Label ID="Label4" runat="server" Text="Antiguedad:" CssClass="lbl"></asp:Label> <br />
-                        <asp:TextBox ID="txtAños" runat="server" Width="50px"></asp:TextBox>
+                        <asp:TextBox ID="txtAños" runat="server" Width="50px" OnTextChanged="TextChanged_txt" AutoPostBack="true"></asp:TextBox>
                          <asp:Label ID="lblAños" runat="server" Text="  Años" CssClass="lbl"></asp:Label> <br />
-                                           <asp:TextBox ID="TxtMeses" runat="server" Width="50px" ></asp:TextBox>
+                         <asp:TextBox ID="TxtMeses" runat="server" Width="50px" OnTextChanged="TextChanged_txt" AutoPostBack="true"></asp:TextBox>
                          <asp:Label ID="lblMeses" runat="server" Text="  Meses" CssClass="lbl"></asp:Label> <br />
-                         <asp:TextBox ID="txtDias" runat="server" Width="50px"></asp:TextBox>
+                         <asp:TextBox ID="txtDias" runat="server" Width="50px" OnTextChanged="TextChanged_txt" AutoPostBack="true"></asp:TextBox>
                          <asp:Label ID="lblDias" runat="server" Text="  Días" CssClass="lbl"></asp:Label> <br />
 
                     </asp:TableCell>
