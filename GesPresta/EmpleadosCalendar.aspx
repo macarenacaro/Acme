@@ -66,20 +66,6 @@
             </asp:TableRow>
 
             <asp:TableRow runat="server" Height="40px">
-                <asp:TableCell runat="server" CssClass="celName" Text="Fecha de Nacimiento"> </asp:TableCell>                 
-                <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtFnaEmp" runat="server" CssClass="txtBox" OnTextChanged="TextChanged_txt" AutoPostBack="true"></asp:TextBox>
-                </asp:TableCell>
-            </asp:TableRow>
-
-            <asp:TableRow runat="server" Height="40px">
-                <asp:TableCell runat="server" CssClass="celName" Text="Fecha de Ingreso"> </asp:TableCell>        
-                <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtFinEmp" runat="server" CssClass="txtBox" OnTextChanged="TextChanged_txt" AutoPostBack="true"></asp:TextBox>
-                </asp:TableCell>
-            </asp:TableRow>
-
-            <asp:TableRow runat="server" Height="40px">
                 <asp:TableCell runat="server" CssClass="celName" Text="Sexo"> </asp:TableCell>            
                 <asp:TableCell runat="server">
                     <asp:RadioButtonList ID="rblSexEmp" runat="server" RepeatDirection="horizontal" CssClass="rbtBtnLst">
@@ -105,14 +91,15 @@
         </asp:Table>
         
         
-
+    <!-- SECCION CALENDARIO-->
       
             <asp:Table ID="Table2" runat="server"  Width="90%" >
                 <asp:TableRow runat="server">
 
                     <asp:TableCell runat="server" Width="20%">
                         <asp:Label ID="Label2" runat="server" Text="Fecha de Nacimiento" CssClass="lbl"></asp:Label> <br />
-                        <asp:TextBox ID="txtNac" runat="server" OnTextChanged="TextChanged_txt" AutoPostBack="true"></asp:TextBox><br />
+                    <asp:TextBox ID="txtFnaEmp" runat="server" OnTextChanged="TextChanged_txt" AutoPostBack="true" placeholder="DD/MM/AAAA"></asp:TextBox>
+                        <asp:Label ID="invalidaNac" runat="server" Text="  Fecha Inválida" Visible="False" CssClass="lblError"></asp:Label>
                          <asp:Label ID="lblError1" runat="server" Text="" CssClass="lblError"></asp:Label> <br /><br />
                          <asp:Label ID="lblError3" runat="server" Text="" CssClass="lblError"></asp:Label> <br /><br />
 
@@ -127,7 +114,8 @@
 
                     <asp:TableCell runat="server" Width="20%">
                          <asp:Label ID="Label3" runat="server" Text="Fecha de Ingreso" CssClass="lbl"></asp:Label> <br />
-                        <asp:TextBox ID="cFinEmp" runat="server" OnTextChanged="TextChanged_txt" AutoPostBack="true"></asp:TextBox><br />
+                        <asp:TextBox ID="txtFinEmp" runat="server" OnTextChanged="TextChanged_txt" AutoPostBack="true" placeholder="DD/MM/AAAA"></asp:TextBox><br />
+                        <asp:Label ID="invalidaIngr" runat="server" Text="  Fecha Inválida" Visible="False" CssClass="lblError"></asp:Label>
                         <asp:Label ID="lblError2" runat="server" Text="" CssClass="lblError"></asp:Label> <br />
 
                     </asp:TableCell>
