@@ -43,6 +43,8 @@
                 <asp:TableCell runat="server">
                     <asp:TextBox ID="txtImpPre" runat="server" CssClass="txtBox"></asp:TextBox>
                      <asp:RequiredFieldValidator ID="rqdTxtImpPre" runat="server" ErrorMessage="El Importe es obligatorio" ControlToValidate="txtImpPre" CssClass="obligacion"></asp:RequiredFieldValidator>
+                     <br /><asp:RangeValidator ID="rgnTxtImpPre" runat="server" ErrorMessage="Debe estar entre 0,00 y 500,00" ControlToValidate="txtImpPre"  MinimumValue="0,00" MaximumValue="500,00" Type="Double" CssClass="rango"></asp:RangeValidator> 
+
                 </asp:TableCell>
             </asp:TableRow>
 
@@ -51,6 +53,8 @@
                 <asp:TableCell runat="server">
                     <asp:TextBox ID="txtPorPre" runat="server" CssClass="txtBox"></asp:TextBox>
                      <asp:RequiredFieldValidator ID="rqdTxtPorPre" runat="server" ErrorMessage="El Porcentaje es obligatorio" ControlToValidate="txtPorPre" CssClass="obligacion"></asp:RequiredFieldValidator>
+                      <br /><asp:RangeValidator ID="rgnTxtPorPre" runat="server" ErrorMessage="Debe estar entre 0,00 y 15,00 %" ControlToValidate="txtPorPre"  MinimumValue="0,00" MaximumValue="15,00" Type="Double" CssClass="rango"></asp:RangeValidator> 
+
                 </asp:TableCell>
             </asp:TableRow>       
 
