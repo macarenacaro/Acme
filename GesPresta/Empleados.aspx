@@ -23,58 +23,59 @@
 
         <asp:Table ID="Table1" runat="server" Width="100%">
             <asp:TableRow runat="server" Height="40px">
-                <asp:TableCell runat="server" CssClass="celName" Text="Código Empleado"> </asp:TableCell>
+                <asp:TableCell runat="server" CssClass="celName" Text="Código Empleado"> 
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtCodEmp" runat="server" CssClass="txtBox"></asp:TextBox>
+                  <asp:TextBox ID="txtCodEmp" runat="server" CssClass="txtBox"></asp:TextBox> <asp:RequiredFieldValidator ID="rqdTxtCodEmp" runat="server" ErrorMessage="El código es obligatorio" ControlToValidate="txtCodEmp"  CssClass="obligacion" ></asp:RequiredFieldValidator>
+                </asp:TableCell>
                 </asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow runat="server" Height="40px">
                 <asp:TableCell runat="server" CssClass="celName" Text="NIF"> </asp:TableCell>               
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtNifEmp" runat="server" CssClass="txtBox" ></asp:TextBox>
+                    <asp:TextBox ID="txtNifEmp" runat="server" CssClass="txtBox" ></asp:TextBox> <asp:RequiredFieldValidator  ID="rqdTxtNifEmp" runat="server" ErrorMessage="El NIF es obligatorio" ControlToValidate="txtNifEmp"  CssClass="obligacion" ></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow runat="server" Height="40px">
                 <asp:TableCell runat="server" CssClass="celName" Text="Apellidos y Nombre"> </asp:TableCell>              
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtNomEmp" runat="server" CssClass="txtBox"  Width="600"></asp:TextBox>
+                    <asp:TextBox ID="txtNomEmp" runat="server" CssClass="txtBox"  Width="600"></asp:TextBox><asp:RequiredFieldValidator  ID="rqdTxtNomEmp" runat="server" ErrorMessage="El nombre y apellido es obligatorio" ControlToValidate="txtNomEmp"  CssClass="obligacion" ></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow runat="server" Height="40px">
                 <asp:TableCell runat="server" CssClass="celName" Text="Dirección" > </asp:TableCell>       
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtDirEmp" runat="server" CssClass="txtBox"  Width="650"></asp:TextBox>
+                    <asp:TextBox ID="txtDirEmp" runat="server" CssClass="txtBox"  Width="650"></asp:TextBox> <asp:RequiredFieldValidator  ID="rqdTxtDirEmp" runat="server" ErrorMessage="La dirección es obligatoria" ControlToValidate="txtDirEmp"  CssClass="obligacion" ></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow runat="server" Height="40px">
                 <asp:TableCell runat="server" CssClass="celName" Text="Ciudad"> </asp:TableCell>                
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtCiuEmp" runat="server" CssClass="txtBox" Width="650"></asp:TextBox>
+                    <asp:TextBox ID="txtCiuEmp" runat="server" CssClass="txtBox" Width="650"></asp:TextBox> <asp:RequiredFieldValidator   ID="rqdTxtCiuEmp" runat="server" ErrorMessage="La ciudad es obligatoria" ControlToValidate="txtCiuEmp"  CssClass="obligacion" ></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow runat="server" Height="40px">
                 <asp:TableCell runat="server" CssClass="celName" Text="Teléfonos"> </asp:TableCell>               
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtTelEmp" runat="server" CssClass="txtBox" Width="400"></asp:TextBox>
+                    <asp:TextBox ID="txtTelEmp" runat="server" CssClass="txtBox" Width="400"></asp:TextBox> <asp:RequiredFieldValidator   ID="rqdTxtTelEmp" runat="server" ErrorMessage="El número de telefono es obligatorio" ControlToValidate="txtTelEmp"  CssClass="obligacion" ></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow runat="server" Height="40px">
                 <asp:TableCell runat="server" CssClass="celName" Text="Fecha de Nacimiento"> </asp:TableCell>                 
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtFnaEmp" runat="server" CssClass="txtBox"></asp:TextBox>
+                   <asp:TextBox ID="txtFnaEmp" runat="server" CssClass="txtBox"></asp:TextBox> <asp:RequiredFieldValidator   ID="rqdTxtFnaEmp" runat="server" ErrorMessage="La fecha de nacimiento es obligatoria" ControlToValidate="txtFnaEmp"  CssClass="obligacion" ></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow runat="server" Height="40px">
                 <asp:TableCell runat="server" CssClass="celName" Text="Fecha de Ingreso"> </asp:TableCell>        
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtFinEmp" runat="server" CssClass="txtBox"></asp:TextBox>
+                    <asp:TextBox ID="txtFinEmp" runat="server" CssClass="txtBox"></asp:TextBox> <asp:RequiredFieldValidator   ID="rqdTxtFinEmp" runat="server" ErrorMessage="La fecha de ingreso es obligatoria" ControlToValidate="txtFinEmp"  CssClass="obligacion" ></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
 

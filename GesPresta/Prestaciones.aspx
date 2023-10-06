@@ -26,6 +26,7 @@
                 <asp:TableCell runat="server" CssClass="celName" Text="Código Prestación"> </asp:TableCell>
                 <asp:TableCell runat="server">
                     <asp:TextBox ID="txtCodPre" runat="server" CssClass="txtBox"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rqdTxtCodPre" runat="server" ErrorMessage="El código Prestacion es obligatorio" ControlToValidate="txtCodPre" CssClass="obligacion"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
 
@@ -33,6 +34,7 @@
                 <asp:TableCell runat="server" CssClass="celName" Text="Descripción"> </asp:TableCell>               
                 <asp:TableCell runat="server">
                     <asp:TextBox ID="txtDesPre" runat="server" CssClass="txtBox" Width="650"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="rqdTxtDesPre" runat="server" ErrorMessage="La Descripcion es obligatoria" ControlToValidate="txtDesPre" CssClass="obligacion"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
 
@@ -40,6 +42,7 @@
                 <asp:TableCell runat="server" CssClass="celName" Text="Importe Fijo"> </asp:TableCell>              
                 <asp:TableCell runat="server">
                     <asp:TextBox ID="txtImpPre" runat="server" CssClass="txtBox"></asp:TextBox>
+                     <asp:RequiredFieldValidator ID="rqdTxtImpPre" runat="server" ErrorMessage="El Importe es obligatorio" ControlToValidate="txtImpPre" CssClass="obligacion"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
 
@@ -47,6 +50,7 @@
                 <asp:TableCell runat="server" CssClass="celName" Text="Porcentaje del Importe"> </asp:TableCell>       
                 <asp:TableCell runat="server">
                     <asp:TextBox ID="txtPorPre" runat="server" CssClass="txtBox"></asp:TextBox>
+                     <asp:RequiredFieldValidator ID="rqdTxtPorPre" runat="server" ErrorMessage="El Porcentaje es obligatorio" ControlToValidate="txtPorPre" CssClass="obligacion"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>       
 
