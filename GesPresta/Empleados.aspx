@@ -69,7 +69,9 @@
                 <asp:TableCell runat="server" CssClass="celName" Text="Fecha de Nacimiento"> </asp:TableCell>                 
                 <asp:TableCell runat="server">
                    <asp:TextBox ID="txtFnaEmp" runat="server" CssClass="txtBox"></asp:TextBox> <asp:RequiredFieldValidator   ID="rqdTxtFnaEmp" runat="server" ErrorMessage="La fecha de nacimiento es obligatoria" ControlToValidate="txtFnaEmp"  CssClass="obligacion" ></asp:RequiredFieldValidator>
-                </asp:TableCell>
+               <br />
+                    <asp:CompareValidator ID="cmpTxtFnaEmp" runat="server" ErrorMessage="La Fecha de Ingreso del Empleado debe ser mayor que la Fecha de Nacimiento" ControlToValidate="txtFnaEmp" ControlToCompare="txtFinEmp" CssClass="compare" Type="Date" Operator="LessThan"></asp:CompareValidator>
+                    </asp:TableCell>
             </asp:TableRow>
 
             <asp:TableRow runat="server" Height="40px">
