@@ -105,24 +105,6 @@ namespace GesPresta
         protected global::System.Web.UI.WebControls.TextBox txtTelEmp;
 
         /// <summary>
-        /// Control txtFnaEmp.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFnaEmp;
-
-        /// <summary>
-        /// Control txtFinEmp.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFinEmp;
-
-        /// <summary>
         /// Control rblSexEmp.
         /// </summary>
         /// <remarks>
@@ -159,13 +141,22 @@ namespace GesPresta
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control txtNac.
+        /// Control txtFnaEmp.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNac;
+        protected global::System.Web.UI.WebControls.TextBox txtFnaEmp;
+
+        /// <summary>
+        /// Control invalidaNac.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label invalidaNac;
 
         /// <summary>
         /// Control lblError1.
@@ -204,13 +195,22 @@ namespace GesPresta
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Control cFinEmp.
+        /// Control txtFinEmp.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cFinEmp;
+        protected global::System.Web.UI.WebControls.TextBox txtFinEmp;
+
+        /// <summary>
+        /// Control invalidaIngr.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label invalidaIngr;
 
         /// <summary>
         /// Control lblError2.

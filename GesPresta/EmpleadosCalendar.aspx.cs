@@ -49,55 +49,29 @@ namespace GesPresta
             "<br/> Departamento: " + ddlDepEmp.Text;
 
         }
-
+        /* EVALUACIONES EN EL CALENDARIO DE NACIMIENTO */
         protected void CalendarBorn_SelectionChanged(object sender, EventArgs e)
         {
             //CUANDO SELECCIONO UNA FECHA DEL CALENDARIO DE NACIMIENTO
             //muestro la fecha seleccionada del calendar Born en los textbox
-            txtNac.Text = (CalendarBorn.SelectedDate.ToString()).Substring(0, 11); // LE SACO LOS 00:00:00 A LA FECHA SELECCIONADA ;
             txtFnaEmp.Text = (CalendarBorn.SelectedDate.ToString()).Substring(0, 11); // LE SACO LOS 00:00:00 A LA FECHA SELECCIONADA ;                       
+            invalidaNac.Visible = false;
 
             //SI AMBOSTIENEN TEXTOS HAREMOS:
-            if ((cFinEmp.Text != "") && (txtNac.Text != ""))
+            if ((txtFinEmp.Text != "") && (txtFnaEmp.Text != ""))
             {
                 //SI LA FECHA DE NACIMIENTO ES MAYOR A LA FECHA DE INGRESO)
-                if (Convert.ToDateTime(txtNac.Text) >= Convert.ToDateTime(cFinEmp.Text))
+                if (Convert.ToDateTime(txtFnaEmp.Text) >= Convert.ToDateTime(txtFinEmp.Text))
                 {
                     lblError1.Text = "La fecha de Nacimiento,\n no puede ser mayor o Igual a la de Ingreso";
                 }
                 else { lblError1.Text = string.Empty; };
             }
 
-            //SOLO PARA EVALUAR LA FECHA DE INGRESO:
-            if (cFinEmp.Text != "")
-            { //SI LA CASILLA NO ESTÁ VACIA
-                if (Convert.ToDateTime(cFinEmp.Text) > DateTime.Today)
-                {
-                    lblError2.Text = "La fecha de Ingreso,\n no puede ser mayor al día actual";
-
-                    txtAños.Text = string.Empty;
-                    TxtMeses.Text = string.Empty;
-                    txtDias.Text = string.Empty;
-                }
-                else
-                {
-                    lblError2.Text = string.Empty;
-
-                    // SE CALCULA LA ANTIGUEDAD
-                    DateTime dtHoy = System.DateTime.Now;
-                    TimeSpan diferencia = dtHoy - Convert.ToDateTime(cFinEmp.Text); //CAMBIÉ ESTA PARTE
-                    DateTime fechamin = new DateTime(1, 1, 1);
-                    txtAños.Text = ((fechamin + diferencia).Year - 1).ToString();
-                    TxtMeses.Text = ((fechamin + diferencia).Month - 1).ToString();
-                    txtDias.Text = ((fechamin + diferencia).Day).ToString();
-
-                };
-            };
-
             //SOLO PARA FECHA DE NACIMIENTO
-            if (txtNac.Text != "")
+            if (txtFnaEmp.Text != "")
             {
-                if (Convert.ToDateTime(txtNac.Text) > DateTime.Today)
+                if (Convert.ToDateTime(txtFnaEmp.Text) > DateTime.Today)
                 {
                     lblError3.Text = "La fecha de Nacimiento,\n no puede ser mayor al día actual";
                 }
@@ -105,20 +79,20 @@ namespace GesPresta
             };
 
         }
-
+        /* EVALUACIONES EN EL CALENDARIO DE INGRESO */
         protected void CalendarIngr_SelectionChanged(object sender, EventArgs e)
         {
 
             //CUANDO SELECCIONO UNA FECHA DEL CALENDARIO DE INGRESO
             //muestro la fecha seleccionada del calendar Ingr en los textbox
-            cFinEmp.Text = (CalendarIngr.SelectedDate.ToString()).Substring(0, 11); // LE SACO LOS 00:00:00 A LA FECHA SELECCIONADA ;
             txtFinEmp.Text = (CalendarIngr.SelectedDate.ToString()).Substring(0, 11);
+            invalidaIngr.Visible = false;
 
             //SI AMBOSTIENEN TEXTOS HAREMOS:
-            if ((cFinEmp.Text != "") && (txtNac.Text != ""))
+            if ((txtFinEmp.Text != "") && (txtFnaEmp.Text != ""))
             {
                 //SI LA FECHA DE NACIMIENTO ES MAYOR A LA FECHA DE INGRESO)
-                if (Convert.ToDateTime(txtNac.Text) >= Convert.ToDateTime(cFinEmp.Text))
+                if (Convert.ToDateTime(txtFnaEmp.Text) >= Convert.ToDateTime(txtFinEmp.Text))
                 {
                     lblError1.Text = "La fecha de Nacimiento,\n no puede ser mayor o Igual a la de Ingreso";
                 }
@@ -126,9 +100,9 @@ namespace GesPresta
             }
 
             //SOLO PARA EVALUAR LA FECHA DE INGRESO:
-            if (cFinEmp.Text != "")
+            if (txtFinEmp.Text != "")
             { //SI LA CASILLA NO ESTÁ VACIA
-                if (Convert.ToDateTime(cFinEmp.Text) > DateTime.Today)
+                if (Convert.ToDateTime(txtFinEmp.Text) > DateTime.Today)
                 {
                     lblError2.Text = "La fecha de Ingreso,\n no puede ser mayor al día actual";
 
@@ -142,7 +116,7 @@ namespace GesPresta
 
                     // SE CALCULA LA ANTIGUEDAD
                     DateTime dtHoy = System.DateTime.Now;
-                    TimeSpan diferencia = dtHoy - Convert.ToDateTime(cFinEmp.Text); //CAMBIÉ ESTA PARTE
+                    TimeSpan diferencia = dtHoy - Convert.ToDateTime(txtFinEmp.Text); //CAMBIÉ ESTA PARTE
                     DateTime fechamin = new DateTime(1, 1, 1);
                     txtAños.Text = ((fechamin + diferencia).Year - 1).ToString();
                     TxtMeses.Text = ((fechamin + diferencia).Month - 1).ToString();
@@ -150,17 +124,7 @@ namespace GesPresta
 
                 };
             };
-
-            //SOLO PARA FECHA DE NACIMIENTO
-            if (txtNac.Text != "")
-            {
-                if (Convert.ToDateTime(txtNac.Text) > DateTime.Today)
-                {
-                    lblError3.Text = "La fecha de Nacimiento,\n no puede ser mayor al día actual";
-                }
-                else { lblError3.Text = string.Empty; };
-            };
-
+          
         }
 
 
@@ -171,39 +135,29 @@ namespace GesPresta
 
             TextBox textos = sender as TextBox;
 
-            switch (textos.ID) {
-                case "txtNac": //SI ESTOY MODIFICANDO LA FECHA EN ESTE TEXTBOX
-                    CalendarBorn.SelectedDate = Convert.ToDateTime(txtNac.Text); //EL CALENDARIO MOSTRARÁ ESTA FECHA
-                    CalendarBorn.VisibleDate = Convert.ToDateTime(txtNac.Text); // LA HARÁ VISIBLE
-                    txtFnaEmp.Text = txtNac.Text; //CAMBIARÉ la fecha a esta.
-                     break;
-                case "txtFnaEmp": //SI ESTOY MODIFICANDO LA FECHA EN ESTE TEXTBOX
-                    CalendarBorn.SelectedDate = Convert.ToDateTime(txtFnaEmp.Text); //EL CALENDARIO MOSTRARÁ ESTA FECHA
-                    CalendarBorn.VisibleDate = Convert.ToDateTime(txtFnaEmp.Text); // LA HARÁ VISIBLE
-                    txtNac.Text = txtFnaEmp.Text; //CAMBIARÉ la fecha a esta.
-                    break;
+            try
+            {
+                switch (textos.ID)
+                {
+                    
+                    case "txtFnaEmp": //SI ESTOY MODIFICANDO LA FECHA EN ESTE TEXTBOX
+                        CalendarBorn.SelectedDate = Convert.ToDateTime(txtFnaEmp.Text); //EL CALENDARIO MOSTRARÁ ESTA FECHA
+                        CalendarBorn.VisibleDate = Convert.ToDateTime(txtFnaEmp.Text); // LA HARÁ VISIBLE
+                        invalidaNac.Visible = false;
+                        break;
 
-                case "cFinEmp": //SI ESTOY MODIFICANDO LA FECHA EN ESTE TEXTBOX
-                    CalendarIngr.SelectedDate = Convert.ToDateTime(cFinEmp.Text); //EL CALENDARIO MOSTRARÁ ESTA FECHA
-                    CalendarIngr.VisibleDate = Convert.ToDateTime(cFinEmp.Text); // LA HARÁ VISIBLE
-                    txtFinEmp.Text = cFinEmp.Text; //CAMBIARÉ la fecha a esta.
-                    break;
-
-                case "txtFinEmp": //SI ESTOY MODIFICANDO LA FECHA EN ESTE TEXTBOX
-                    CalendarIngr.SelectedDate = Convert.ToDateTime(txtFinEmp.Text); //EL CALENDARIO MOSTRARÁ ESTA FECHA
-                    CalendarIngr.VisibleDate = Convert.ToDateTime(txtFinEmp.Text); // LA HARÁ VISIBLE
-                    cFinEmp.Text = txtFinEmp.Text; //CAMBIARÉ la fecha a esta.
-                    break;
-
-            }
-
-
+                    case "txtFinEmp": //SI ESTOY MODIFICANDO LA FECHA EN ESTE TEXTBOX
+                        CalendarIngr.SelectedDate = Convert.ToDateTime(txtFinEmp.Text); //EL CALENDARIO MOSTRARÁ ESTA FECHA
+                        CalendarIngr.VisibleDate = Convert.ToDateTime(txtFinEmp.Text); // LA HARÁ VISIBLE
+                        invalidaIngr.Visible = false;
+                        break;
+                }
 
             //SI AMBOSTIENEN TEXTOS HAREMOS:
-            if ((cFinEmp.Text != "") && (txtNac.Text != ""))
+            if ((txtFinEmp.Text != "") && (txtFnaEmp.Text != ""))
             {
                 //SI LA FECHA DE NACIMIENTO ES MAYOR A LA FECHA DE INGRESO)
-                if (Convert.ToDateTime(txtNac.Text) >= Convert.ToDateTime(cFinEmp.Text))
+                if (Convert.ToDateTime(txtFnaEmp.Text) >= Convert.ToDateTime(txtFinEmp.Text))
                 {
                     lblError1.Text = "La fecha de Nacimiento,\n no puede ser mayor o Igual a la de Ingreso";
                 }
@@ -211,9 +165,9 @@ namespace GesPresta
             }
 
             //SOLO PARA EVALUAR LA FECHA DE INGRESO:
-            if (cFinEmp.Text != "")
+            if (txtFinEmp.Text != "")
             { //SI LA CASILLA NO ESTÁ VACIA
-                if (Convert.ToDateTime(cFinEmp.Text) > DateTime.Today)
+                if (Convert.ToDateTime(txtFinEmp.Text) > DateTime.Today)
                 {
                     lblError2.Text = "La fecha de Ingreso,\n no puede ser mayor al día actual";
 
@@ -227,7 +181,7 @@ namespace GesPresta
 
                     // SE CALCULA LA ANTIGUEDAD
                     DateTime dtHoy = System.DateTime.Now;
-                    TimeSpan diferencia = dtHoy - Convert.ToDateTime(cFinEmp.Text); //CAMBIÉ ESTA PARTE
+                    TimeSpan diferencia = dtHoy - Convert.ToDateTime(txtFinEmp.Text); //CAMBIÉ ESTA PARTE
                     DateTime fechamin = new DateTime(1, 1, 1);
                     txtAños.Text = ((fechamin + diferencia).Year - 1).ToString();
                     TxtMeses.Text = ((fechamin + diferencia).Month - 1).ToString();
@@ -236,15 +190,29 @@ namespace GesPresta
                 };
             };
 
+
             //SOLO PARA FECHA DE NACIMIENTO
-            if (txtNac.Text != "")
+            if (txtFnaEmp.Text != "")
             {
-                if (Convert.ToDateTime(txtNac.Text) > DateTime.Today)
+                if (Convert.ToDateTime(txtFnaEmp.Text) > DateTime.Today)
                 {
                     lblError3.Text = "La fecha de Nacimiento,\n no puede ser mayor al día actual";
                 }
                 else { lblError3.Text = string.Empty; };
             };
+
+            }
+            catch
+            {
+
+                switch (textos.ID)
+                {
+
+                    case "txtFnaEmp": invalidaNac.Visible = true; break;
+                    case "txtFinEmp": invalidaIngr.Visible = true; break;
+                }
+
+            }
 
         }
     }
