@@ -27,6 +27,10 @@
                 <asp:TableCell runat="server">
                     <asp:TextBox ID="txtCodPre" runat="server" CssClass="txtBox"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rqdTxtCodPre" runat="server" ErrorMessage="El código Prestacion es obligatorio" ControlToValidate="txtCodPre" CssClass="obligacion"></asp:RequiredFieldValidator>
+                    <br /> <asp:RegularExpressionValidator ID="regTxtCodPre" runat="server" ErrorMessage="El formato de los datos a introducir debe ser: 3 dígitos, un guión, 3 dígitos, un
+guion y, 3 dígitos" ControlToValidate="txtCodPre" CssClass="expresion" ValidationExpression="\d{3}-\d{3}-\d{3}"></asp:RegularExpressionValidator>
+
+                    
                 </asp:TableCell>
             </asp:TableRow>
 
