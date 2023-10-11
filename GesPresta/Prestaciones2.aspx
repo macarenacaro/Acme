@@ -41,10 +41,6 @@ guion y, 3 dígitos" ControlToValidate="txtCodPre" CssClass="expresion" Validati
                     <asp:TextBox ID="txtDesPre" runat="server" CssClass="txtBox" Width="650"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="rqdTxtDesPre" runat="server" ErrorMessage="La Descripcion es obligatoria" ControlToValidate="txtDesPre" CssClass="obligacion"></asp:RequiredFieldValidator>
                 </asp:TableCell>
-                <asp:TableCell runat="server" > 
-
-
-                </asp:TableCell>  
             </asp:TableRow>
 
             <asp:TableRow runat="server" Height="40px">

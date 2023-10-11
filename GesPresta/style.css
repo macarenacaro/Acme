@@ -123,16 +123,9 @@ text-align:center;
     border: none;
     color: white;
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     margin-left: 10px;
     padding: 2px;
     transition: 0.3s;
     cursor: pointer;
-}
-
-.bajo {
-display:flex;
-flex-direction:row;
-justify-content:center;
-align-items:center;
 }
