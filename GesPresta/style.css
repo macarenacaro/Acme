@@ -113,6 +113,7 @@ text-align: center;
     margin-left: 30px;
 }
 .resumen {
+list-style:none;
 font-size:12px;
 color:red;
 text-align:center;
